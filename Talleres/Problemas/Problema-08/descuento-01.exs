@@ -2,7 +2,7 @@ defmodule Descuento do
   def main do
     tipo_bolsa="Ingresar el tipo de bolsa : plastica, biodegradable, o reutilizable"
     |> Util.ingresar(:texto)
-    
+
     descuento(tipo_bolsa)
   end
 
@@ -15,3 +15,4 @@ defmodule Descuento do
     end
   end
 end
+
