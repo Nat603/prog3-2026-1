@@ -7,15 +7,15 @@ defmodule Vocales do
         |> String.graphemes()
         |> contar(0)
 
-        IO.puts("La cadena tiene #{cantidad} vocales.")
-      end
+      IO.puts("La cadena tiene #{cantidad} vocales.")
+    end
 
-      defp contar([], vocal), do: vocal
-      defp contar([head | tail], vocal) do
-        nueva_vocal = if head in ["a", "e", "i", "o", "u"], do: vocal + 1, else: vocal
-        contar(tail, nueva_vocal)
-      end
+    defp contar([], vocal), do: vocal
+    defp contar([head | tail], vocal) do
+      nueva_vocal = if head in ["a", "e", "i", "o", "u"], do: vocal + 1, else: vocal
+      contar(tail, nueva_vocal)
     end
   end
+end
 
-  Vocales.contar_vocales_graphemes("Tengo hambre")
+Vocales.ContadorVocales.contar_vocales_graphemes("Tengo")
