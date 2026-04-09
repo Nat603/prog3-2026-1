@@ -23,6 +23,24 @@ defmodule Perfecto do
   end
 
   # Versión optimizada (hasta raíz cuadrada)
+  @doc """
+  Determina si un número es perfecto usando un enfoque optimizado.
+
+  Esta versión es más eficiente para números grandes ya que solo verifica
+  divisores hasta la raíz cuadrada del número.
+
+  ## Parámetros
+  - n: El número entero a verificar.
+
+  ## Retorno
+  - true si el número es perfecto, false en caso contrario.
+
+  ## Ejemplos
+      iex> Perfecto.es_perfecto_optimizado(6)
+      true
+      iex> Perfecto.es_perfecto_optimizado(10)
+      false
+  """
   def es_perfecto_optimizado(n) when n < 2, do: false
 
   def es_perfecto_optimizado(n) do
@@ -49,6 +67,12 @@ defmodule Perfecto do
     sumar_divisores_opt(num, divisor + 1, nuevo_acum)
   end
 
+  @doc """
+  Ejecuta pruebas para verificar la funcionalidad del módulo.
+
+  Imprime una tabla con números de prueba, su suma de divisores,
+  si son considerados perfectos y si el resultado es correcto.
+  """
   def probar do
     numeros = [6, 28, 496, 8128, 10, 12, 1, 0]
 
