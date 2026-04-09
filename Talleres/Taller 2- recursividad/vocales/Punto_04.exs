@@ -1,5 +1,6 @@
 defmodule CadenaMasLarga do
 
+  # Función para encontrar la cadena más larga en una lista de cadenas
   def main do
     lista = ["sol", "computador", "luz", "universidad"]
     resultado = cadena_mas_larga(lista)
